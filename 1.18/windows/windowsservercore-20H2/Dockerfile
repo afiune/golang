@@ -53,7 +53,7 @@ RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH)
 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
 # doing this first to share cache across versions more aggressively
 
-ENV GOLANG_VERSION 1.18beta1
+ENV GOLANG_VERSION 1.18
 
 RUN $url = 'https://go.dev/dl/go1.18.windows-amd64.zip'; \
 	Write-Host ('Downloading {0} ...' -f $url); \
